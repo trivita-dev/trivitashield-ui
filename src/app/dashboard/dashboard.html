@@ -1,0 +1,62 @@
+<div class="wrapper wrapper-content animated fadeInRight dashboard-page">
+
+    <!--BEGIN: Welcome Message-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title clearfix">
+                    <h2 class="pull-left">{{$ctrl.contentTitle}}</h2>
+                    <div class="ibox-tools"></div>
+                </div>
+                <div class="ibox-content">
+                    <p>{{$ctrl.contentDescr}}</p>
+                    <a href="" ng-click="$ctrl.sync('fitBit')" class="btn btn-w-m btn-primary" ng-show="$ctrl.isUser"><i class="fa fa-refresh"></i> Sync From FitBit (Optional)</a>
+                    <br />
+                    <br />
+                    <p>Cras vitae ligula purus. Morbi et enim at nunc vestibulum convallis ac sagittis metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    <a ui-sref="app.assessment" class="btn btn-w-m btn-primary" ng-show="$ctrl.isUser"><i class="fa fa-tasks"></i> Start Assessment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END: Welcome Message-->
+
+    <!--BEGIN: Dashboard Content-->
+    <h2>Information</h2>
+    <p><strong>Last Updated: </strong> 07/24/16 9:24 pm</p>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>TriVita Shield Score</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">{{$ctrl.dashboard.Score}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Top Risk Factors</h5>
+                </div>
+                <div class="ibox-content">
+                    <p>Select risk to focus your healthy living plan on</p>
+                    <p>No Results</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>BMI</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">0</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END: Dashboard Content-->
+
+</div>

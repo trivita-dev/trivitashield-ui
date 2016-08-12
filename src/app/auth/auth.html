@@ -1,0 +1,40 @@
+<div class="wrapper wrapper-content animated fadeInRight auth-page">
+
+    <!-- TODO: Get Spinner Service working -->
+    <!-- <spinner name="authSpinner"></spinner> -->
+    <div class="row">
+        <div class="col-md-4 offset-md-4 col-xs-12">
+            <p class="text-xs-center">
+                <a ui-sref="app.login" ng-show="$ctrl.authType === 'register'">Have an account?</a>
+                <a ui-sref="app.register" ng-show="$ctrl.authType === 'login'">Need an account?</a>
+            </p>
+            <list-errors errors="$ctrl.errors"></list-errors>
+            <form ng-submit="$ctrl.submitForm()">
+                <fieldset ng-disabled="$ctrl.isSubmitting">
+                    <fieldset class="form-group" ng-show="$ctrl.authType === 'register'">
+                        <input class="form-control form-control-lg" type="text" placeholder="First Name" ng-model="$ctrl.formData.firstname" />
+                    </fieldset>
+                    <fieldset class="form-group" ng-show="$ctrl.authType === 'register'">
+                        <input class="form-control form-control-lg" type="text" placeholder="Last Name" ng-model="$ctrl.formData.lastname" />
+                    </fieldset>
+                    <!--
+                        TODO: This "Register" email field will validate email address as field type filter, but uses the same name as
+                        the "login" email field which causes a conflict that prevents submission. Need to find a way to prevent this
+                        and display one or the other rather than having to use just one for both since the login can accepts either
+                        an email OR a user account ID.
+                     -->
+                    <!-- <fieldset class="form-group" ng-show="$ctrl.authType === 'register'">
+                        <input class="form-control form-control-lg" type="email" placeholder="Email" ng-model="$ctrl.formData.username" />
+                    </fieldset> -->
+                    <fieldset class="form-group">
+                        <input class="form-control form-control-lg" type="text" placeholder="Email (or TriVita Account ID)" ng-model="$ctrl.formData.username" />
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input class="form-control form-control-lg" type="password" placeholder="Password" ng-model="$ctrl.formData.password" />
+                    </fieldset>
+                    <button class="btn btn-lg btn-primary pull-xs-right" type="submit" ng-bind="::$ctrl.title"></button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

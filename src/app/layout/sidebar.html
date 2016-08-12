@@ -1,0 +1,62 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+
+        <!-- BEGIN: Display for Guest Users -->
+        <ul show-authed="false" side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="profile-element" uib-dropdown>
+                    <span class="clear">
+                        <span class="block m-t-xs">
+                            <a class="navbar-brand" ui-sref="app.home" ng-bind="::$ctrl.appName"></a>
+                        </span>
+                    </span>
+                </div>
+                <div class="logo-element">PWA</div>
+            </li>
+            <!-- <li ui-sref-active="active">
+                <a ui-sref="app.dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> <span class="nav-label">Dashboard</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.assessment"><i class="fa fa-flask" aria-hidden="true"></i> <span class="nav-label">Assessment</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.hlplan"><i class="fa fa-heartbeat" aria-hidden="true"></i> <span class="nav-label">Healthy Living Plan</span></a>
+            </li> -->
+        </ul>
+        <!-- END: Display for Guest Users -->
+
+        <!-- BEGIN: Display for Authenticated Users -->
+        <ul show-authed="true" sidebar-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="profile-element" uib-dropdown>
+                    <span class="clear">
+                        <span class="block m-t-xs">
+                            <a class="navbar-brand" ui-sref="app.home" ng-bind="::$ctrl.appName | lowercase"></a>
+                        </span>
+                    </span>
+                </div>
+                <div class="logo-element">PWA</div>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> <span class="nav-label">Dashboard</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.assessment"><i class="fa fa-flask" aria-hidden="true"></i> <span class="nav-label">Assessment</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.hlplan"><i class="fa fa-heartbeat" aria-hidden="true"></i> <span class="nav-label">Healthy Living Plan</span></a>
+            </li>
+            <!-- <li ui-sref-active="active">
+                <a ui-sref="app.dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> <span class="nav-label">Dashboard</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.assessment"><i class="fa fa-flask" aria-hidden="true"></i> <span class="nav-label">Assessment</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.healthy-living-plan"><i class="fa fa-heartbeat" aria-hidden="true"></i> <span class="nav-label">Healthy Living Plan</span></a>
+            </li> -->
+        </ul>
+        <!-- END: Display for Authenticated Users -->
+
+    </div>
+</nav>

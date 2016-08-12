@@ -1,0 +1,25 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+	<!-- Sidebar - App Menu -->
+	<app-sidebar></app-sidebar>
+
+	<!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <!-- <div id="page-wrapper" class="gray-bg {{$state.current.name}}"> -->
+	<div id="page-wrapper" class="gray-bg">
+
+    	<!-- Topbar - User Menu -->
+		<app-header></app-header>
+
+		<!-- App Content -->
+		<div ui-view></div>
+
+		<!-- Footer - Copyright -->
+		<app-footer></app-footer>
+
+	</div>
+    <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
